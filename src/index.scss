@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ── Color tokens ──────────────────────────────────────────────
+$ceil:         #FF00FF;
+$ceil-alt:     #BA68C8;
+$floor:        #00FFFF;
+$floor-alt:    #4DD0E1;
+$ref:          #FFD600;
+$up:           #00E676;
+$down:         #FF1744;
+$board-bg:     #0A0E17;
+$board-bg-alt: #121620;
+
+:root {
+  --color-ceil:         #{$ceil};
+  --color-ceil-alt:     #{$ceil-alt};
+  --color-floor:        #{$floor};
+  --color-floor-alt:    #{$floor-alt};
+  --color-ref:          #{$ref};
+  --color-up:           #{$up};
+  --color-down:         #{$down};
+  --color-board-bg:     #{$board-bg};
+  --color-board-bg-alt: #{$board-bg-alt};
+}
+
+// ── Semantic text classes ──────────────────────────────────────
+@layer components {
+  .stock-ceil  { color: $ceil; }
+  .stock-floor { color: $floor; }
+  .stock-ref   { color: $ref; }
+  .stock-up    { color: $up; }
+  .stock-down  { color: $down; }
+}
+
+body {
+  @apply bg-board-bg text-white font-mono;
+}
